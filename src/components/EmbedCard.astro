@@ -1,0 +1,26 @@
+---
+import type { PerformanceData } from "../types";
+
+interface Props {
+  performance: PerformanceData;
+}
+
+const { performance } = Astro.props;
+---
+
+<div class="card text-center h-100">
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe
+      loading="lazy"
+      class="embed-responsive-item"
+      src={performance.embedLink}
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+
+  <div class="card-body text-center">
+    <h5 class="card-title">{performance.name}</h5>
+    <p class="card-text text-muted">{performance.date}</p>
+  </div>
+</div>

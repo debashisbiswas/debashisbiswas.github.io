@@ -1,0 +1,50 @@
+---
+import type { SoftwareData } from "../types";
+
+interface Props {
+  project: SoftwareData;
+}
+
+const { project } = Astro.props;
+---
+
+<div class="card text-center h-100">
+  <div class="card-body">
+    <h5 class="card-title">{project.name}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">
+      {project.lang}
+    </h6>
+    <p class="card-text">{project.desc}</p>
+  </div>
+
+  {
+    (project.link || project.sourceCode) && (
+      <div class="card-footer">
+        <div class="row">
+          {project.link && (
+            <div class="col">
+              <a
+                href={project.link}
+                target="_blank"
+                class="btn btn-primary btn-block"
+              >
+                See project
+              </a>
+            </div>
+          )}
+          {project.sourceCode && (
+            <div class="col">
+              <a
+                href={project.sourceCode}
+                target="_blank"
+                class="btn btn-primary btn-block"
+              >
+                Source code
+              </a>
+            </div>
+          )}
+        </div>
+      </div>
+    )
+  }
+</div>
