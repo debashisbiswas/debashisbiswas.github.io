@@ -1,10 +1,10 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
-import type { SoftwareData, PerformanceData } from "./types";
+import type { SoftwareData, PerformanceData } from "./types"
 
-export const SITE_TITLE = "Debashis Biswas";
+export const SITE_TITLE = "Debashis Biswas"
 export const SITE_DESCRIPTION =
-  "Collection of software projects and music performances by Debashis Biswas";
+  "Collection of software projects and music performances by Debashis Biswas"
 
 export const SOFTWARE_PROJECTS: SoftwareData[] = [
   {
@@ -71,7 +71,7 @@ export const SOFTWARE_PROJECTS: SoftwareData[] = [
     lang: "Python + MySQL",
     desc: "Discord bot that managed the Knights of Academia 2021 Pom War, a competition to log pomodoro sessions",
   },
-];
+]
 
 export const OPEN_SOURCE_CONTRIBUTIONS: SoftwareData[] = [
   {
@@ -98,7 +98,7 @@ export const OPEN_SOURCE_CONTRIBUTIONS: SoftwareData[] = [
     desc: "Discord bot that oversees the Knights of Academia Discord server",
     sourceCode: "https://github.com/Knights-Of-Academia/horace",
   },
-];
+]
 
 export const MUSIC_PERFORMANCES: PerformanceData[] = [
   {
@@ -176,4 +176,4 @@ export const MUSIC_PERFORMANCES: PerformanceData[] = [
     date: "March 18, 2019",
     embedLink: "https://www.youtube.com/embed/MZBN6R462Zw",
   },
-];
+]

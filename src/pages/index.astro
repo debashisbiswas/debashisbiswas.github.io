@@ -1,15 +1,15 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import ProjectCard from "../components/ProjectCard.astro";
-import EmbedCard from "../components/EmbedCard.astro";
+import BaseHead from "../components/BaseHead.astro"
+import Header from "../components/Header.astro"
+import ProjectCard from "../components/ProjectCard.astro"
+import EmbedCard from "../components/EmbedCard.astro"
 import {
   SITE_TITLE,
   SITE_DESCRIPTION,
   SOFTWARE_PROJECTS,
   OPEN_SOURCE_CONTRIBUTIONS,
   MUSIC_PERFORMANCES,
-} from "../content";
+} from "../content"
 ---
 
 <!DOCTYPE html>
@@ -20,16 +20,12 @@ import {
 
   <body class="max-w-[900px] mx-auto bg-gradient-to-r from-violet-100 to-blue-100">
     <main role="main" class="mx-4">
-      <Header title={SITE_TITLE} />
+      <Header />
       <!-- Project Section -->
       <div id="project-section" class="my-4">
         <h3 class="text-3xl font-bold text-center p-3">Software Projects</h3>
         <div class="space-y-8">
-          {
-            SOFTWARE_PROJECTS.map((project) => (
-              <ProjectCard project={project} />
-            ))
-          }
+          {SOFTWARE_PROJECTS.map((project) => <ProjectCard project={project} />)}
         </div>
       </div>
 
@@ -37,11 +33,7 @@ import {
       <div id="opensource-section" class="my-4">
         <h3 class="text-3xl font-bold text-center p-3">Open Source Contributions</h3>
         <div class="space-y-8">
-          {
-            OPEN_SOURCE_CONTRIBUTIONS.map((project) => (
-              <ProjectCard project={project} />
-            ))
-          }
+          {OPEN_SOURCE_CONTRIBUTIONS.map((project) => <ProjectCard project={project} />)}
         </div>
       </div>
 
@@ -49,14 +41,9 @@ import {
       <div id="music-section" class="my-4">
         <h3 class="text-3xl text-center p-3">Music Performances</h3>
         <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
-          {
-            MUSIC_PERFORMANCES.map((performance) => (
-              <EmbedCard performance={performance} />
-            ))
-          }
+          {MUSIC_PERFORMANCES.map((performance) => <EmbedCard performance={performance} />)}
         </div>
       </div>
     </main>
-
   </body>
 </html>
