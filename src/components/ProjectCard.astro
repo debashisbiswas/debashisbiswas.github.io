@@ -1,5 +1,6 @@
 ---
 import type { SoftwareData } from "../types";
+import LinkButton from "./LinkButton.astro";
 
 interface Props {
   project: SoftwareData;
@@ -8,43 +9,23 @@ interface Props {
 const { project } = Astro.props;
 ---
 
-<div class="card text-center h-100">
-  <div class="card-body">
-    <h5 class="card-title">{project.name}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">
-      {project.lang}
-    </h6>
-    <p class="card-text">{project.desc}</p>
-  </div>
+<div>
+  <h4 class="font-bold text-xl mb-1">
+    {project.name}
+    <span class="text-lg text-slate-400 italic">{project.lang}</span>
+  </h4>
+  <div class="mb-4">{project.desc}</div>
 
-  {
-    (project.link || project.sourceCode) && (
-      <div class="card-footer">
-        <div class="row">
-          {project.link && (
-            <div class="col">
-              <a
-                href={project.link}
-                target="_blank"
-                class="btn btn-primary btn-block"
-              >
-                See project
-              </a>
-            </div>
-          )}
-          {project.sourceCode && (
-            <div class="col">
-              <a
-                href={project.sourceCode}
-                target="_blank"
-                class="btn btn-primary btn-block"
-              >
-                Source code
-              </a>
-            </div>
-          )}
-        </div>
-      </div>
-    )
-  }
+  <div class="flex justify-start space-x-2">
+    {
+      project.link && (
+        <LinkButton href={project.link}>Link</LinkButton>
+      )
+    }
+    {
+      project.sourceCode && (
+        <LinkButton href={project.sourceCode}>Code</LinkButton>
+      )
+    }
+  </div>
 </div>

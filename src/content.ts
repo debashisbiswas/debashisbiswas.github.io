@@ -5,17 +5,8 @@ import type { SoftwareData, PerformanceData } from "./types";
 export const SITE_TITLE = "Debashis Biswas";
 export const SITE_DESCRIPTION =
   "Collection of software projects and music performances by Debashis Biswas";
-export const ABOUT =
-  "I'm Debashis, an engineering intern at Intel studying at Arizona State University. I also play music, and I have a degree in clarinet performance! On this website, you will find many of my software projects and music performances.";
 
 export const SOFTWARE_PROJECTS: SoftwareData[] = [
-  {
-    name: "SRP Peak Status",
-    lang: "HTML/CSS/JS + Bootstrap",
-    desc: "Displays current SRP peak status to help decide when to use energy throughout the day.",
-    sourceCode: "https://github.com/debashisbiswas/srp-peak-status",
-    link: "https://debashisbiswas.github.io/srp-peak-status/",
-  },
   {
     name: "SRP Peak Status",
     lang: "HTML/CSS/JS + Bootstrap",
@@ -69,21 +60,6 @@ export const SOFTWARE_PROJECTS: SoftwareData[] = [
     link: "https://kkp-bo-website.web.app",
   },
   {
-    name: "KOA Pom War 2021 Bot",
-    lang: "Python + MySQL",
-    desc: "Discord bot that managed the Knights of Academia 2021 Pom War, a competition to log pomodoro sessions",
-  },
-  {
-    name: "KOA Pom War 2020 Bot",
-    lang: "Python + PostgreSQL",
-    desc: "Discord bot that managed the Knights of Academia 2020 Pom War, a competition to log pomodoro sessions",
-  },
-  {
-    name: "KOA May Pom War Dashboard",
-    lang: "Angular + Node.js + PostgreSQL",
-    desc: "Private website that displays competition statistics and team rankings for the Knights of Academia 2020 Pom War",
-  },
-  {
     name: "Teleprompter",
     lang: "Android (Java + Kotlin)",
     desc: "Teleprompter Android App on the Google Play Store",
@@ -91,42 +67,9 @@ export const SOFTWARE_PROJECTS: SoftwareData[] = [
     link: "https://play.google.com/store/apps/details?id=com.maestoso.teleprompter",
   },
   {
-    name: "Todoica",
-    lang: "Heroku + Node.js",
-    desc: "Synchronizes tasks between task manager applications Todoist and Habitica",
-    sourceCode: "https://github.com/debashisbiswas/todoica",
-  },
-  {
-    name: "Bitmap Image Processor",
-    lang: "C",
-    desc: "Multithreaded C program that reads bitmap images and alters color data using multiple threads",
-    sourceCode: "https://github.com/debashisbiswas/multithreaded_bmpreader",
-  },
-  {
-    name: "Music Exercise Randomizer",
-    lang: "Python",
-    desc: "Randomizes fundamental exercises to supplement music practice",
-    sourceCode: "https://github.com/debashisbiswas/music-fundamentals",
-  },
-  {
-    name: "Pitch Transposer",
-    lang: "Python",
-    desc: "Transposes pitches between two specified keys",
-    sourceCode: "https://github.com/debashisbiswas/transposer",
-  },
-  {
-    name: "Clarinet Spectral Analysis Website",
-    lang: "Firebase + HTML/CSS + Bootstrap",
-    desc: "Website displaying research findings of fellow music student",
-    sourceCode: "https://github.com/debashisbiswas/vashawn-analysis-website",
-    link: "https://vashawn-clarinet.web.app/",
-  },
-  {
-    name: "Jazz Clarinet Methods Website",
-    lang: "Bootstrap",
-    desc: "Website displaying jazz clarinet methods developed by fellow music student",
-    sourceCode: "https://github.com/debashisbiswas/vashawn-analysis-website",
-    link: "https://vashawn-clarinet.web.app/daily-jazz",
+    name: "KOA Pom War 2021 Bot",
+    lang: "Python + MySQL",
+    desc: "Discord bot that managed the Knights of Academia 2021 Pom War, a competition to log pomodoro sessions",
   },
 ];
 

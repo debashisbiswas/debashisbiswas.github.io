@@ -1,13 +1,11 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import EmbedCard from "../components/EmbedCard.astro";
 import {
   SITE_TITLE,
   SITE_DESCRIPTION,
-  ABOUT,
   SOFTWARE_PROJECTS,
   OPEN_SOURCE_CONTRIBUTIONS,
   MUSIC_PERFORMANCES,
@@ -20,76 +18,45 @@ import {
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
 
-  <body>
-    <Header title={SITE_TITLE} />
-    <main role="main" class="pb-3">
-      <!-- Content -->
-      <div class="container">
-        <!-- About Section -->
-        <div id="about-section">
-          <div class="row justify-content-center align-items-center">
-            <div class="col-12 col-lg-7 text-center">
-              <p class="lead text-lg-left">{ABOUT}</p>
-            </div>
-            <div class="col-12 col-lg-4">
-              <img
-                class="rounded mx-auto d-block img-fluid"
-                src="headshot_web.png"
-              />
-            </div>
-          </div>
+  <body class="max-w-[900px] mx-auto bg-gradient-to-r from-violet-100 to-blue-100">
+    <main role="main" class="mx-4">
+      <Header title={SITE_TITLE} />
+      <!-- Project Section -->
+      <div id="project-section" class="my-4">
+        <h3 class="text-3xl font-bold text-center p-3">Software Projects</h3>
+        <div class="space-y-8">
+          {
+            SOFTWARE_PROJECTS.map((project) => (
+              <ProjectCard project={project} />
+            ))
+          }
         </div>
+      </div>
 
-        <hr />
-
-        <!-- Project Section -->
-        <div id="project-section">
-          <h2 class="text-center p-3">Software Projects</h2>
-          <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
-            {
-              SOFTWARE_PROJECTS.map((project) => (
-                <div class="col mb-4">
-                  <ProjectCard project={project} />
-                </div>
-              ))
-            }
-          </div>
+      <!-- Open Source Section -->
+      <div id="opensource-section" class="my-4">
+        <h3 class="text-3xl font-bold text-center p-3">Open Source Contributions</h3>
+        <div class="space-y-8">
+          {
+            OPEN_SOURCE_CONTRIBUTIONS.map((project) => (
+              <ProjectCard project={project} />
+            ))
+          }
         </div>
+      </div>
 
-        <hr />
-
-        <!-- Open Source Section -->
-        <div id="opensource-section">
-          <h2 class="text-center p-3">Open Source Contributions</h2>
-          <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
-            {
-              OPEN_SOURCE_CONTRIBUTIONS.map((project) => (
-                <div class="col mb-4">
-                  <ProjectCard project={project} />
-                </div>
-              ))
-            }
-          </div>
-        </div>
-
-        <hr />
-
-        <!-- Music Section -->
-        <div id="music-section">
-          <h2 class="text-center p-3">Music Performances</h2>
-          <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
-            {
-              MUSIC_PERFORMANCES.map((performance) => (
-                <div class="col mb-4">
-                  <EmbedCard performance={performance} />
-                </div>
-              ))
-            }
-          </div>
+      <!-- Music Section -->
+      <div id="music-section" class="my-4">
+        <h3 class="text-3xl text-center p-3">Music Performances</h3>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+          {
+            MUSIC_PERFORMANCES.map((performance) => (
+              <EmbedCard performance={performance} />
+            ))
+          }
         </div>
       </div>
     </main>
 
-    <Footer />
   </body>
 </html>
