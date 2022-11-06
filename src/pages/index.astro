@@ -1,8 +1,8 @@
 ---
 import BaseHead from "../components/BaseHead.astro"
 import Header from "../components/Header.astro"
-import ProjectCard from "../components/ProjectCard.astro"
-import EmbedCard from "../components/EmbedCard.astro"
+import ProjectDisplay from "../components/ProjectDisplay.astro"
+import EmbedDisplay from "../components/EmbedDisplay.astro"
 import {
   SITE_TITLE,
   SITE_DESCRIPTION,
@@ -21,27 +21,25 @@ import {
   <body class="max-w-[900px] mx-auto bg-gradient-to-r from-violet-100 to-blue-100">
     <main role="main" class="mx-4">
       <Header />
-      <!-- Project Section -->
-      <div id="project-section" class="my-4">
+
+      <div class="my-4">
         <h3 class="text-3xl font-bold text-center p-3">Software Projects</h3>
         <div class="space-y-8">
-          {SOFTWARE_PROJECTS.map((project) => <ProjectCard project={project} />)}
+          {SOFTWARE_PROJECTS.map((project) => <ProjectDisplay project={project} />)}
         </div>
       </div>
 
-      <!-- Open Source Section -->
-      <div id="opensource-section" class="my-4">
+      <div class="my-4">
         <h3 class="text-3xl font-bold text-center p-3">Open Source Contributions</h3>
         <div class="space-y-8">
-          {OPEN_SOURCE_CONTRIBUTIONS.map((project) => <ProjectCard project={project} />)}
+          {OPEN_SOURCE_CONTRIBUTIONS.map((project) => <ProjectDisplay project={project} />)}
         </div>
       </div>
 
-      <!-- Music Section -->
-      <div id="music-section" class="my-4">
-        <h3 class="text-3xl text-center p-3">Music Performances</h3>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
-          {MUSIC_PERFORMANCES.map((performance) => <EmbedCard performance={performance} />)}
+      <div class="my-4">
+        <h3 class="text-3xl font-bold text-center p-3">Music Performances</h3>
+        <div class="space-y-8">
+          {MUSIC_PERFORMANCES.map((performance) => <EmbedDisplay performance={performance} />)}
         </div>
       </div>
     </main>
