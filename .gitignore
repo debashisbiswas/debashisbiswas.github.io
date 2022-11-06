@@ -1,14 +1,6 @@
-# editor
+.github/
 .vscode/
-
-# build output
 dist/
-
-# dependencies
 node_modules/
-
-# logs
 npm-debug.log*
-
-# macOS-specific files
 .DS_Store
