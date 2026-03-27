@@ -1,13 +1,15 @@
 ---
 interface Props {
   href: string
+  target?: string
 }
 
-const { href } = Astro.props
+const { href, target } = Astro.props
 ---
 
 <a
   href={href}
+  target={target}
   class="underline decoration-purple-500 decoration-2 underline-offset-2 transition ease-out hover:text-purple-500"
   ><slot /></a
 >
