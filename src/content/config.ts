@@ -10,12 +10,4 @@ const blog = defineCollection({
   }),
 })
 
-const streams = defineCollection({
-  type: "content",
-  schema: z.object({ date: z.date() }),
-})
-
-export const collections = {
-  blog,
-  streams,
-}
+export const collections = { blog }
