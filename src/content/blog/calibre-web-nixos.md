@@ -88,7 +88,7 @@ desktop app. So, to update my server collection, I wrote a script to `rsync` my
 files to the server.
 
 ```bash
-rsync -rhP "$HOME/Calibre Library" violet@vexahlia:/srv/calibre
+rsync -rhP "$HOME/Calibre Library" "violet@vexahlia:/srv/calibre/"
 ```
 
 I can run this periodically to update the collection on the server. In the
