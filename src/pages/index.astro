@@ -1,6 +1,9 @@
 ---
 import SiteLayout from "@layouts/SiteLayout.astro"
 import Link from "../components/Link.astro"
+
+import GitHub from "../components/icons/GitHub.astro"
+import LinkedIn from "../components/icons/LinkedIn.astro"
 ---
 
 <SiteLayout>
@@ -8,8 +11,23 @@ import Link from "../components/Link.astro"
     class="my-6 flex flex-col items-center justify-around gap-8 text-center sm:flex-row sm:gap-0 sm:text-left"
   >
     <div class="order-last font-sans sm:order-first">
-      <h1 class="mb-2 text-4xl font-bold tracking-tight">Debashis Biswas</h1>
-      <p class="text-lg">Software engineer, musician</p>
+      <div class="mb-4">
+        <h1 class="mb-2 text-4xl font-bold tracking-tight">Debashis Biswas</h1>
+        <p class="text-lg">Software engineer, musician</p>
+      </div>
+
+      <p class="text-lg">debashis [at] dbiswas [dot] com</p>
+      <div class="mt-4 flex flex-col items-center gap-3 text-sm sm:items-start">
+        <div class="flex items-center gap-4">
+          <Link href="https://github.com/debashisbiswas/">
+            <GitHub size={20} />
+          </Link>
+
+          <Link href="https://www.linkedin.com/in/d-biswas/">
+            <LinkedIn size={20} />
+          </Link>
+        </div>
+      </div>
     </div>
 
     <div class="flex justify-center">
@@ -54,12 +72,6 @@ import Link from "../components/Link.astro"
         target="_blank">contra-alto clarinet</Link
       >, and <Link href="https://youtu.be/feMnKts7Vf0" target="_blank">contrabass clarinet</Link>. I
       also studied instrument repair with Dr. Steve Prescott and actively repair clarinets.
-    </p>
-    <p>
-      You can find me on
-      <Link href="https://github.com/debashisbiswas/">GitHub</Link>,
-      <Link href="https://x.com/raenastra">Twitter</Link>, and
-      <Link href="https://www.linkedin.com/in/d-biswas/">LinkedIn</Link>.
     </p>
   </section>
 </SiteLayout>
